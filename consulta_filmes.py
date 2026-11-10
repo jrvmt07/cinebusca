@@ -5,7 +5,7 @@ from filme import Filme
 
 class ConsultaFilmes:
     def buscar_filmes(self, titulo):
-        url = "http://127.0.0.1:8000/filmes"
+        url = "https://cinebusca-api.onrender.com/filmes"
 
         resposta = requests.get(
             url,
