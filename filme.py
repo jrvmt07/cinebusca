@@ -1,10 +1,11 @@
 class Filme:
-    def __init__(self, titulo, ano, genero, nota, sinopse):
+    def __init__(self, titulo, ano, genero, nota, sinopse, plataformas):
         self.titulo = titulo
         self.ano = ano
         self.genero = genero
         self.nota = nota
         self.sinopse = sinopse
+        self.plataformas = plataformas
 
     def exibir_informacoes(self):
         print(f"Título: {self.titulo}")
@@ -17,3 +18,8 @@ class Filme:
             print(f"Nota: {self.nota}")
 
         print(f"Sinopse: {self.sinopse}")
+        
+        if self.plataformas:
+            print(f"Onde assistir: {', '.join(self.plataformas)}")
+        else:
+            print("Onde assistir: Nenhuma plataforma encontrada.")
